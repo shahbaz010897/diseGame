@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>&#127922&nbspDice-Game</title>
+
+	<style >
+		img{
+			width: 200px;
+			height:200px;
+		}
+		table {
+			border-spacing: 50px;
+		}
+		button{
+			background-color:#F7743F;
+			border:none;
+			border-radius: 20px;
+			
+		}
+		button,a{
+			font-size: 50px;
+			text-decoration: none;
+			padding: 10px 20px;
+			color: black;
+
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<center>
+				<h1>The Dice Game</h1>
+			<table>
+		<tr>
+		<th>
+		
+				<h2>Player-1</h2>
+        </th>
+
+		<th>
+			<h2>Player-2</h2>
+		</th>
+	
+		</tr>
+		<tr>
+			<td>
+				<img src="dice6.png">
+			</td>
+			<td>
+				<img src="dice6.png">
+			</td>
+		</tr>
+			</table>
+			<button ><a href="diceGame.html">Play</a></button>
+		</center>
+			
+			
+			
+		</div>
+	</div>
+</div>
+<script>
+	var randomNumber=Math.floor(Math.random()*6)+1;
+	var diceNumber=("dice"+randomNumber+".png");
+	var image1=document.querySelectorAll("img")[0];
+	image1.setAttribute("src",diceNumber);
+
+	var randomNumber2=Math.floor(Math.random()*6)+1;
+	var diceNumber2=("dice"+randomNumber2+".png");
+	var image2=document.querySelectorAll("img")[1];
+	image2.setAttribute("src",diceNumber2);
+
+	if(diceNumber>diceNumber2){
+		document.querySelector("h1").innerHTML="Player-1 win&#128681"
+	}
+
+	else if(diceNumber<diceNumber2){
+		document.querySelector("h1").innerHTML="Player-2 win&#128681"
+	}
+	else{
+		document.querySelector("h1").innerHTML="it's tie!&#128533"
+	}
+
+</script>
+</body>
+</html>
